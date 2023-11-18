@@ -186,10 +186,11 @@ export const projects = [
   {
     iconUrl: pricewise,
     theme: "btn-back-red",
-    name: "Amazon Price Tracker",
+    name: "MEnú Diarior",
     description:
       "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://github.com/adrianhajdin/pricewise",
+    link: "https://apps.apple.com/es/app/menu-di%C3%A1rio/id6467143567",
+    link2: "https://apps.apple.com/es/app/menu-di%C3%A1rio/id6467143567",
   },
   {
     iconUrl: threads,

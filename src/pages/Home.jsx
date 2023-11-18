@@ -15,7 +15,7 @@ const Home = () => {
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
   const audioRef = useRef(new Audio(sakura));
-  audioRef.current.volume = 0.4;
+  audioRef.current.volume = 0.2;
   audioRef.current.loop = true;
 
   useEffect(() => {
@@ -80,7 +80,14 @@ const Home = () => {
         </Suspense>
       </Canvas>
       <div className="absolute bottom-2 left-2">
-        <img src={isPlayingMusic ? soundon : soundoff} alt="sound-icn" />
+        <img
+          src={isPlayingMusic ? soundon : soundoff}
+          alt="sound-icn"
+          className="w-10 h-10 curser-pointer object-contain"
+          onClick={() => {
+            setIsPlayingMusic(!isPlayingMusic);
+          }}
+        />
       </div>
     </section>
   );

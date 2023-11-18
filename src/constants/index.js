@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, shopify, starbucks, tesla, ameropa } from "../assets/images";
 import {
   car,
   contact,
@@ -113,8 +113,8 @@ export const experiences = [
   {
     title: "Frontend Developer",
     company_name: "Ameropa-reisen GmbH",
-    icon: starbucks,
-    iconBg: "#accbe1",
+    icon: ameropa,
+    iconBg: "#dde1ac",
     date: "July 2022 - Today",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",

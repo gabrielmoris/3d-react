@@ -46,7 +46,7 @@ const About = () => {
                 date={experience.date}
                 icon={
                   <div className="flex justify-center items-center w-full h-full">
-                    <img src={experience.icon} alt={experience.company_name} className="w-[60%] h-[60%] object-contain" />
+                    <img src={experience.icon} alt={experience.company_name} className="w-[90%] h-[90%] object-contain" />
                   </div>
                 }
                 iconStyle={{

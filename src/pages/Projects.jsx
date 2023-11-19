@@ -23,18 +23,36 @@ const Projects = () => {
             <div className="block-container w-12 h-12">
               <div className={`btn-back rounded-xl ${project.theme}`} />
               <div className="btn-front rounded-xl flex justify-center items-center">
-                <img src={project.iconUrl} alt="Project Icon" className="w-1/2 h-1/2 object-contain" />
+                <img src={project.iconUrl} alt="Project Icon" className="w-[80%] h-[80%] rounded-lg object-contain" />
               </div>
             </div>
             <div className="mt-5 flex flex-col">
               <h4 className="text-2xl font-poppins font-semibold">{project.name}</h4>
               <p className="mt-2 text-slate-500">{project.description}</p>
-              <div className="mt-5 flex items-center gap-2 font-poppins ">
-                <Link to={project.link} target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600">
-                  Live Link
-                </Link>
-                <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
-              </div>
+              {project.link && (
+                <div className="mt-5 flex items-center gap-2 font-poppins ">
+                  <Link to={project.link} target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600">
+                    Live Link
+                  </Link>
+                  <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
+                </div>
+              )}
+              {project.linkAndroid && (
+                <div className="mt-5 flex items-center gap-2 font-poppins ">
+                  <Link to={project.linkAndroid} target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600">
+                    Android Link
+                  </Link>
+                  <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
+                </div>
+              )}
+              {project.linkIOS && (
+                <div className="mt-5 flex items-center gap-2 font-poppins ">
+                  <Link to={project.linkIOS} target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600">
+                    IOS Link
+                  </Link>
+                  <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
+                </div>
+              )}
             </div>
           </div>
         ))}

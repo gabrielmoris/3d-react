@@ -1,10 +1,14 @@
-import { meta, shopify, starbucks, tesla, ameropa } from "../assets/images";
+import { beehivve, ameropa, me, brasscollective, menudiario, keyboard } from "../assets/images";
 import {
+  aws,
   car,
   contact,
   css,
+  cypress,
   estate,
   express,
+  figma,
+  firebase,
   git,
   github,
   html,
@@ -15,6 +19,7 @@ import {
   mui,
   nextjs,
   nodejs,
+  nuxt,
   pricewise,
   react,
   redux,
@@ -24,6 +29,7 @@ import {
   tailwindcss,
   threads,
   typescript,
+  vue,
 } from "../assets/icons";
 
 export const skills = [
@@ -78,13 +84,28 @@ export const skills = [
     type: "Frontend",
   },
   {
+    imageUrl: nuxt,
+    name: "Nuxt",
+    type: "Frontend",
+  },
+  {
     imageUrl: nodejs,
     name: "Node.js",
     type: "Backend",
   },
   {
+    imageUrl: cypress,
+    name: "Cypress",
+    type: "Testing",
+  },
+  {
     imageUrl: react,
     name: "React",
+    type: "Frontend",
+  },
+  {
+    imageUrl: vue,
+    name: "Vue",
     type: "Frontend",
   },
   {
@@ -107,6 +128,21 @@ export const skills = [
     name: "TypeScript",
     type: "Frontend",
   },
+  {
+    imageUrl: aws,
+    name: "Amazon Web Services",
+    type: "Frontend",
+  },
+  {
+    imageUrl: firebase,
+    name: "Firebase",
+    type: "Frontend",
+  },
+  {
+    imageUrl: figma,
+    name: "Figma",
+    type: "Design",
+  },
 ];
 
 export const experiences = [
@@ -117,49 +153,47 @@ export const experiences = [
     iconBg: "#dde1ac",
     date: "July 2022 - Today",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Responsible for maintaining the company's website.",
+      "Participating in the development of internal services and the main page, organizing projects with backend developers, and providing solutions for internal services",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#fbc3bc",
-    date: "Jan 2021 - Feb 2022",
+    title: "Web Development Intern",
+    company_name: "Beehivve",
+    icon: beehivve,
+    iconBg: "#000000",
+    date: "Apr 2022 - July 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Managed the maintenance of the landing page.",
+      "Successfully coordinating and executing the migration from Handlebars + Node (Express) to React (Next.js) + Firebase",
     ],
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    company_name: "Freelancer",
+    icon: me,
     iconBg: "#b7e4c7",
-    date: "Jan 2022 - Jan 2023",
+    date: "Jun 2021 - Today",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Led development of customized websites, mobile apps, and services.",
+      "Collaborating with other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
+      "Strategic decision-making on structure and technology to mockup creation, hosting, and domain management",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#a2d2ff",
-    date: "Jan 2023 - Present",
+    title: "Trumpet player and Teacher",
+    company_name: "Former Background",
+    icon: brasscollective,
+    iconBg: "#000000",
+    date: "Sep 2016 - Jan 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Presented numerous musical performances.",
+      "Successfully built, organized, and coordinated a brass quintet.",
+      "Efficiently organized lessons, projects, and worked collaboratively with teachers to ensure effective instruction",
     ],
   },
 ];
@@ -184,21 +218,21 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: pricewise,
+    iconUrl: menudiario,
     theme: "btn-back-red",
-    name: "MEnú Diarior",
+    name: "Menú Diario",
     description:
-      "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://apps.apple.com/es/app/menu-di%C3%A1rio/id6467143567",
-    link2: "https://apps.apple.com/es/app/menu-di%C3%A1rio/id6467143567",
+      "Developed a Android / IOS application that enables restaurants to effortlessly upload their menus, allowing users to conveniently access restaurant offerings with just a single click.",
+    linkIOS: "https://apps.apple.com/es/app/menu-di%C3%A1rio/id6467143567",
+    linkAndroid: "https://play.google.com/store/apps/details?id=com.menudiario.app",
   },
   {
-    iconUrl: threads,
-    theme: "btn-back-green",
-    name: "Full Stack Threads Clone",
+    iconUrl: keyboard,
+    theme: "btn-back-black",
+    name: "Manuel Casares Website",
     description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: "https://github.com/adrianhajdin/threads",
+      "The customer needed a website to reach more potential clients. The website was designed following all the requirements of the customer and offers solutions to engage the users with interesting features.",
+    link: "https://manuel-casares.vercel.app/",
   },
   {
     iconUrl: car,

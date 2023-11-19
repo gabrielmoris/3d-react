@@ -249,7 +249,7 @@ export const projects = [
   {
     iconUrl: brasscollective,
     theme: "btn-back-black",
-    name: "www.thebrasscollective.com",
+    name: "thebrasscollective",
     description:
       "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
     link: "https://github.com/adrianhajdin/social_media_app",

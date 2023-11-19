@@ -6,7 +6,7 @@ import { Sky } from "../models/Sky.jsx";
 import { Bird } from "../models/Bird.jsx";
 import { Plane } from "../models/Plane.jsx";
 import HomeInfo from "../components/HomeInfo.jsx";
-import sakura from "../assets/sakura.mp3";
+import arise from "../assets/SKIRK-Arise.mp3";
 import { soundoff, soundon } from "../assets/icons/index.js";
 
 const Home = () => {
@@ -14,8 +14,8 @@ const Home = () => {
   const [currentStage, setCurrentStage] = useState(1);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
-  const audioRef = useRef(new Audio(sakura));
-  audioRef.current.volume = 0.2;
+  const audioRef = useRef(new Audio(arise));
+  audioRef.current.volume = 0.3;
   audioRef.current.loop = true;
 
   useEffect(() => {

@@ -35,8 +35,10 @@ import figma from "./figma.svg";
 import openai from "./openai.svg";
 import camera from "./camera.svg";
 import locker from "./locker.svg";
+import gitlab from "./gitlab.svg";
 
 export {
+  gitlab,
   locker,
   camera,
   figma,

@@ -12,6 +12,7 @@ import {
   firebase,
   git,
   github,
+  gitlab,
   html,
   javascript,
   linkedin,
@@ -216,6 +217,11 @@ export const socialLinks = [
     name: "LinkedIn",
     iconUrl: linkedin,
     link: "https://www.linkedin.com/in/gabrielcmoris/",
+  },
+  {
+    name: "Gitlab",
+    iconUrl: gitlab,
+    link: "https://gitlab.com/gabrielcmoris",
   },
 ];
 

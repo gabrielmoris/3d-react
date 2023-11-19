@@ -14,7 +14,7 @@ export const Footer = () => {
           <div className=" flex gap-5">
             {socialLinks.map((link) => {
               return (
-                <Link to={link.link}>
+                <Link key={link.name} to={link.link}>
                   <img src={link.iconUrl} className="w-5 h-5" />
                 </Link>
               );

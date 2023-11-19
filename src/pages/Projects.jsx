@@ -53,6 +53,14 @@ const Projects = () => {
                   <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
                 </div>
               )}
+              {project.linkGithub && (
+                <div className="mt-5 flex items-center gap-2 font-poppins ">
+                  <Link to={project.linkIOS} target="_blank" rel="noopener noreferrer" className="font-bold text-blue-600">
+                    Github Link
+                  </Link>
+                  <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
+                </div>
+              )}
             </div>
           </div>
         ))}

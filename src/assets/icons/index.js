@@ -32,9 +32,15 @@ import soundoff from "./soundoff.png";
 import aws from "./aws.svg";
 import firebase from "./firebase.svg";
 import figma from "./figma.svg";
+import openai from "./openai.svg";
+import camera from "./camera.svg";
+import locker from "./locker.svg";
 
 export {
+  locker,
+  camera,
   figma,
+  openai,
   firebase,
   aws,
   nuxt,

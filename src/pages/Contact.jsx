@@ -5,11 +5,18 @@ import { Canvas } from "@react-three/fiber";
 import { Loader } from "@react-three/drei";
 import { useAlert } from "../hooks/useAlert";
 import { Alert } from "../components/Alert";
+import { MeAvatar } from "../models/Me";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState();
-  const [currentAnimation, setCurrentAnimation] = useState("idle");
+  const [rotationX, setRotationX] = useState(0.3);
+  const animations = {
+    idle: "IdleV4.2(maya_head)_Armature",
+    claps: "Armature_1|mixamo.com|Layer0.002",
+    look: "Armature_1|mixamo.com|Layer0",
+  };
+  const [currentAnimation, setCurrentAnimation] = useState(animations.idle);
 
   const { alert, showAlert, hideAlert } = useAlert();
 
@@ -22,7 +29,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setCurrentAnimation("hit");
+    setCurrentAnimation(animations.claps);
 
     try {
       await emailjs.send(
@@ -41,20 +48,26 @@ const Contact = () => {
       showAlert({ show: true, text: "Message sent sucessfully", type: "success" });
       setTimeout(() => {
         hideAlert();
-        setCurrentAnimation("idle");
+        setCurrentAnimation(animations.claps);
       }, 5000);
 
       setForm({ name: "", email: "", message: "" });
     } catch (e) {
       showAlert({ show: true, text: "I didn't receive your message" });
-      setCurrentAnimation("walk.left");
+      setCurrentAnimation(animations.idle);
       setIsLoading(false);
       console.log("ERROR SENDING MAIL", e);
     }
   };
 
-  const handleFocus = () => setCurrentAnimation("walk");
-  const handleBlur = () => setCurrentAnimation("idle");
+  const handleFocus = () => {
+    setRotationX(-0.5);
+    setCurrentAnimation(animations.look);
+  };
+  const handleBlur = () => {
+    setRotationX(0.3);
+    setCurrentAnimation(animations.idle);
+  };
 
   return (
     <section className="relative h-full flex lg:flex-row flex-col max-container">
@@ -115,7 +128,7 @@ const Contact = () => {
           <directionalLight intensity={2.5} position={[0, 0, 1]} />
           <ambientLight intensity={0.3} />
           <Suspense fallbacj={<Loader />}>
-            <Fox currentAnimation={currentAnimation} position={[0.5, 0.35, 0]} rotation={[12.7, -0.75, 0]} scale={[0.5, 0.4, 0.5]} />
+            <MeAvatar currentAnimation={currentAnimation} position={[0.8, -3, 0]} rotation={[12.7, rotationX, 0]} scale={[2.5, 2.5, 2.5]} />
           </Suspense>
         </Canvas>
       </div>
@@ -124,3 +137,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+// <Fox currentAnimation={currentAnimation} position={[0.5, 0.35, 0]} rotation={[12.7, -0.75, 0]} scale={[0.5, 0.4, 0.5]} />

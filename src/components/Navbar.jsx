@@ -13,6 +13,11 @@ const Navbar = () => {
         <NavLink to="/projects" className={({ isActive }) => (isActive ? "text-blue-500" : "text-gray-400")}>
           <p className="">Projects</p>
         </NavLink>
+        <div className="hidden md:block">
+          <NavLink to="/contact" className={({ isActive }) => (isActive ? "text-blue-500" : "text-gray-400")}>
+            <p className="">Projects</p>
+          </NavLink>
+        </div>
       </nav>
     </header>
   );

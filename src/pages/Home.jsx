@@ -67,7 +67,7 @@ const Home = () => {
           <World scale={[7, 7, 7]} position={islandPosition} rotation={[0.1, 4.7, 0]} isRotating={isRotating} setIsRotating={setIsRotating} />
         </Suspense>
       </Canvas>
-      <div className="absolute bottom-2 left-2 z-20 cursor-pointer">
+      <div className="absolute bottom-5 xl:bottom-2 left-2 z-20 cursor-pointer">
         <img
           src={isPlayingMusic ? soundon : soundoff}
           alt="sound-icn"

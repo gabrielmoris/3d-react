@@ -15,7 +15,7 @@ const Navbar = () => {
         </NavLink>
         <div className="hidden md:block">
           <NavLink to="/contact" className={({ isActive }) => (isActive ? "text-blue-500" : "text-gray-400")}>
-            <p className="">Projects</p>
+            <p className="">Contact</p>
           </NavLink>
         </div>
       </nav>

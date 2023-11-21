@@ -15,7 +15,7 @@ export const MeAvatar = ({ currentAnimation, ...props }) => {
     Object.values(actions).forEach((action) => {
       action.stop();
     });
-    console.log(currentAnimation);
+
     if (actions[currentAnimation]) {
       actions[currentAnimation].play();
     }

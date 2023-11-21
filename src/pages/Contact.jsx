@@ -1,6 +1,5 @@
 import { Suspense, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Fox } from "../models/Fox";
 import { Canvas } from "@react-three/fiber";
 import { Loader } from "@react-three/drei";
 import { useAlert } from "../hooks/useAlert";
@@ -45,15 +44,23 @@ const Contact = () => {
         import.meta.env.VITE_EMAIL_JS_KEY
       );
       setIsLoading(false);
-      showAlert({ show: true, text: "Message sent sucessfully", type: "success" });
-      setTimeout(() => {
-        hideAlert();
-        setCurrentAnimation(animations.claps);
-      }, 5000);
+      showAlert({
+        show: true,
+        text: "Thank you for your message!",
+        type: "success",
+      });
 
-      setForm({ name: "", email: "", message: "" });
+      setTimeout(() => {
+        hideAlert(false);
+        setCurrentAnimation(animations.claps);
+        setForm({ name: "", email: "", message: "" });
+      }, 5000);
     } catch (e) {
-      showAlert({ show: true, text: "I didn't receive your message" });
+      showAlert({
+        show: true,
+        text: "I didn't receive your message.",
+        type: "danger",
+      });
       setCurrentAnimation(animations.idle);
       setIsLoading(false);
       console.log("ERROR SENDING MAIL", e);
@@ -72,7 +79,6 @@ const Contact = () => {
   return (
     <section className="relative h-full flex lg:flex-row flex-col max-container">
       {alert.show && <Alert {...alert} />}
-
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
         <form onSubmit={handleSubmit} className="w-full flex flex-col gap-7 mt-14">

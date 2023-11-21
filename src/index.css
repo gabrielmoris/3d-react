@@ -178,3 +178,28 @@ body:has(.card[data-color="green"]:hover) {
   border: #fff;
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff, 0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.animate-slide-in-from-right {
+  /* I provide a Name and Axis for the element to be animated */
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  /* I give the animation name and I provide the name of the element */
+  animation-timeline: --image;
+  animation-name: show;
+
+  /* I expecify the range of the animation (when to start and to stop) */
+  animation-range: entry 25% cover 65%;
+  animation-fill-mode: both;
+}

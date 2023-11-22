@@ -257,8 +257,8 @@ export const projects = [
     theme: "btn-back-black",
     name: "thebrasscollective",
     description:
-      "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
-    link: "https://github.com/adrianhajdin/social_media_app",
+      "Crafting a digital presence for a brass quintet, I delivered a dynamic website enabling client outreach and seamless updates on concerts, videos, and CD releases. My role encompassed the design, website development, and creation of captivating logos, driving visibility and engagement.",
+    link: "https://www.thebrasscollective.com/",
     linkGithub: "https://github.com/gabrielmoris/www.thebrasscollective.com",
   },
   {

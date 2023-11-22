@@ -37,7 +37,7 @@ const Home = () => {
   const scrolltoBottom = () => {
     if (window.innerWidth > 768) {
       window.scrollTo({
-        top: (document.documentElement.scrollHeight - window.innerHeight) / 2.6,
+        top: (document.documentElement.scrollHeight - window.innerHeight) / 2.1,
         behavior: "smooth",
       });
     } else {
@@ -66,17 +66,16 @@ const Home = () => {
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
     let screenPosition = [0, -8.5, -43];
-    let rotation = [0.1, 4.7, 0];
 
     if (window.innerWidth < 768) {
       screenScale = [0.9, 0.9, 0.9];
     } else {
       screenScale = [1, 1, 1];
     }
-    return [screenScale, screenPosition, rotation];
+    return [screenScale, screenPosition];
   };
 
-  const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize();
+  const [worldScale, worldPosition] = adjustIslandForScreenSize();
 
   return (
     <section className="w-full h-screen relative bg-gradient-to-r from-blue-900 to-slate-900">
@@ -90,7 +89,7 @@ const Home = () => {
           <ambientLight intensity={0.5} />
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
           <Satellite scale={[0.3, 0.3, 0.3]} />
-          <World scale={[7, 7, 7]} position={islandPosition} rotation={[0.1, 4.7, 0]} isRotating={isRotating} setIsRotating={setIsRotating} />
+          <World scale={[7, 7, 7]} position={worldPosition} rotation={[0.1, 4.7, 0]} isRotating={isRotating} setIsRotating={setIsRotating} />
         </Suspense>
       </Canvas>
       <div className="absolute bottom-5 xl:bottom-2 left-2 z-20 cursor-pointer">
@@ -104,10 +103,10 @@ const Home = () => {
         />
       </div>
       {!isBottom ? (
-        <div className="fixed bottom-2 right-0 left-0 flex justify-center">
+        <div className="fixed bottom-2 right-0 left-0 flex justify-end xl:px-20">
           <svg
             onClick={scrolltoBottom}
-            className="animate-bounce cursor-pointer h-8 w-8 text-white"
+            className="animate-bounce cursor-pointer h-12 w-12 text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -119,7 +118,7 @@ const Home = () => {
         <div className="fixed bottom-2 right-0 left-0 flex justify-end xl:px-20">
           <svg
             onClick={scrolltoTop}
-            className="animate-bounce cursor-pointer h-16 w-16 xl:text-white"
+            className="animate-bounce cursor-pointer h-12 w-12 xl:text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

@@ -6,9 +6,8 @@ Source: https://sketchfab.com/3d-models/simple-satellite-low-poly-free-f23b484cd
 Title: Simple Satellite Low Poly Free
 */
 
-import { useAnimations, useGLTF } from "@react-three/drei";
-import birdScene from "../assets/3d/bird.glb";
-import { useRef, useEffect } from "react";
+import { useGLTF } from "@react-three/drei";
+import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
 import satellite from "../assets/3d/satellite.glb";
@@ -16,13 +15,6 @@ import satellite from "../assets/3d/satellite.glb";
 export const Satellite = (props) => {
   const { nodes, materials } = useGLTF(satellite);
   const ref = useRef();
-
-  //   const { scene, animations } = useGLTF(birdScene);
-  //   const { actions } = useAnimations(animations, ref);
-
-  //   useEffect(() => {
-  //     actions["Take 001"].play();
-  //   });
 
   useFrame(({ clock, camera }) => {
     ref.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2;

@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { arrow } from "../assets/icons";
 import HomeInfo from "../components/HomeInfo.jsx";
 import { Footer } from "./Footer.jsx";
 

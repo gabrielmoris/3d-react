@@ -22,10 +22,6 @@ export default {
       boxShadow: {
         card: "0px 1px 2px 0px rgba(0, 0, 0, 0.05)",
       },
-      zIndex: {
-        negative: "-1",
-        morenegative: "-2",
-      },
     },
   },
   plugins: [],

@@ -18,8 +18,34 @@ const Home = () => {
   audioRef.current.loop = true;
 
   const handleScroll = () => {
-    const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight;
-    setIsBottom(bottom);
+    if (window.innerWidth > 768) {
+      const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 500;
+      setIsBottom(bottom);
+    } else {
+      const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 100;
+      setIsBottom(bottom);
+    }
+  };
+
+  const scrolltoTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const scrolltoBottom = () => {
+    if (window.innerWidth > 768) {
+      window.scrollTo({
+        top: (document.documentElement.scrollHeight - window.innerHeight) / 2.6,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: (document.documentElement.scrollHeight - window.innerHeight) / 3.35,
+        behavior: "smooth",
+      });
+    }
   };
 
   useEffect(() => {
@@ -79,11 +105,29 @@ const Home = () => {
       </div>
       {!isBottom ? (
         <div className="fixed bottom-2 right-0 left-0 flex justify-center">
-          <svg className="animate-bounce h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg
+            onClick={scrolltoBottom}
+            className="animate-bounce cursor-pointer h-8 w-8 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7 7l7-7"></path>
           </svg>
         </div>
-      ) : null}
+      ) : (
+        <div className="fixed bottom-2 right-0 left-0 flex justify-end xl:px-20">
+          <svg
+            onClick={scrolltoTop}
+            className="animate-bounce cursor-pointer h-16 w-16 xl:text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 14l7-7l7 7"></path>
+          </svg>
+        </div>
+      )}
       <ScrollInfo />
     </section>
   );

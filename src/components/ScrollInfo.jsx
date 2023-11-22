@@ -6,7 +6,7 @@ import { Footer } from "./Footer.jsx";
 export const ScrollInfo = () => {
   return (
     <section className="flex flex-col gap-48 xl:gap-76 items-center p-1 xl:p-20 bg-gradient-to-b to-purple-900 from-slate-900">
-      <div class="border-l-[80px] mt-44 absolute h-[150vh]   border-dotted border-purple-900 "></div>
+      <div class="border-l-[80px] mt-44 absolute h-[100vh] xl:h-[150vh]   border-dotted border-purple-900 "></div>
       <h1 className="head-text text-slate-500 mt-10 md:mt-0">
         {"<"}
         <span className="blue-gradient_text font-semibold drop-shadow"> Gabrielcmoris </span>

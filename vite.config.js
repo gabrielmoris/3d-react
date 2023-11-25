@@ -15,7 +15,7 @@ export default defineConfig({
         description: "Web Porfolio from Gabriel C. Moris.",
         start_url: "https://www.gabrielcmoris.com",
         display: "standalone",
-        background_color: "#CBD5E133",
+        background_color: "#CBD5E1",
         theme_color: "#000000",
         icons: [
           {
@@ -45,6 +45,7 @@ export default defineConfig({
             },
           },
         ],
+        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // 10 MB
       },
     }),
   ],

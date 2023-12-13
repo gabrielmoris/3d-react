@@ -2,7 +2,8 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useState, useEffect, useRef } from "react";
 import Loader from "../components/Loader";
 import HomeInfo from "../components/HomeInfo.jsx";
-import arise from "../assets/SKIRK-Arise.mp3";
+// import arise from "../assets/SKIRK-Arise.mp3";
+import frontendMoris from "../assets/morisfrontend.mp3"
 import { soundoff, soundon } from "../assets/icons/index.js";
 import { Satellite } from "../models/Satellite.jsx";
 import { World } from "../models/World.jsx";
@@ -13,7 +14,8 @@ const Home = () => {
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
   const [isBottom, setIsBottom] = useState(false);
 
-  const audioRef = useRef(new Audio(arise));
+  // const audioRef = useRef(new Audio(arise));
+  const audioRef = useRef(new Audio(frontendMoris));
   audioRef.current.volume = 0.3;
   audioRef.current.loop = true;
 

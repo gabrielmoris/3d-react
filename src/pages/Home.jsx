@@ -3,7 +3,7 @@ import { Suspense, useState, useEffect, useRef } from "react";
 import Loader from "../components/Loader";
 import HomeInfo from "../components/HomeInfo.jsx";
 // import arise from "../assets/SKIRK-Arise.mp3";
-import frontendMoris from "../assets/morisfrontend.mp3"
+import song from "../assets/moris-song.mp3"
 import { soundoff, soundon } from "../assets/icons/index.js";
 import { Satellite } from "../models/Satellite.jsx";
 import { World } from "../models/World.jsx";
@@ -15,7 +15,7 @@ const Home = () => {
   const [isBottom, setIsBottom] = useState(false);
 
   // const audioRef = useRef(new Audio(arise));
-  const audioRef = useRef(new Audio(frontendMoris));
+  const audioRef = useRef(new Audio(song));
   audioRef.current.volume = 0.3;
   audioRef.current.loop = true;
 

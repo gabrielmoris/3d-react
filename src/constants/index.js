@@ -1,4 +1,4 @@
-import { beehivve, ameropa, me, brasscollective, menudiario, keyboard, aiCoverletters } from "../assets/images";
+import { beehivve, ameropa, me, brasscollective, menudiario, keyboard, jobsAi } from "../assets/images";
 import {
   aws,
   camera,
@@ -236,12 +236,12 @@ export const projects = [
     linkAndroid: "https://play.google.com/store/apps/details?id=com.menudiario.app",
   },
   {
-    iconUrl: aiCoverletters,
+    iconUrl: jobsAi,
     theme: "btn-back-black",
-    name: "AI Coverletters",
+    name: "jobs-ai",
     description:
       "I built a web application using Next.js that leverages the OpenAI API to generate personalized cover letters for job seekers.  Users can easily tailor their cover letters through a user-friendly interface and download them in PDF format for seamless integration with their job applications.  For a global audience, the application is built with next-intl, enabling support for multiple languages.",
-    link: "https://ai-coverletters.vercel.app",
+    link: "https://jobs-ai.vercel.app/",
   },
   {
     iconUrl: keyboard,

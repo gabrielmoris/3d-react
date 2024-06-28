@@ -6,6 +6,6 @@ import me from "./me.png";
 import brasscollective from "./brasscollective.png";
 import menudiario from "./menudiario.png";
 import keyboard from "./keyboard.svg";
-import aiCoverletters from "./aiCoverletters.svg";
+import jobsAi from "./jobsAi.svg";
 
-export { hero, logo, ameropa, beehivve, me, brasscollective, menudiario, keyboard, aiCoverletters };
+export { hero, logo, ameropa, beehivve, me, brasscollective, menudiario, keyboard, jobsAi };

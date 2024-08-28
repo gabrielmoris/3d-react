@@ -241,7 +241,7 @@ export const projects = [
     name: "jobs-ai",
     description:
       "I built a web application using Next.js that leverages the OpenAI API to generate personalized cover letters for job seekers.  Users can easily tailor their cover letters through a user-friendly interface and download them in PDF format for seamless integration with their job applications.  For a global audience, the application is built with next-intl, enabling support for multiple languages.",
-    link: "https://jobs-ai.vercel.app/",
+    link: "https://jobs-ai.gabrielcmoris.com/",
   },
   {
     iconUrl: keyboard,

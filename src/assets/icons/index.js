@@ -36,6 +36,7 @@ import openai from "./openai.svg";
 import camera from "./camera.svg";
 import locker from "./locker.svg";
 import gitlab from "./gitlab.svg";
+import refhub from "./refhub-icn.svg";
 
 export {
   gitlab,
@@ -61,6 +62,7 @@ export {
   nodejs,
   react,
   redux,
+  refhub,
   sass,
   tailwindcss,
   typescript,

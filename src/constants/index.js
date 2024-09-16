@@ -27,6 +27,7 @@ import {
   pricewise,
   react,
   redux,
+  refhub,
   sass,
   snapgram,
   summiz,
@@ -242,6 +243,14 @@ export const projects = [
     description:
       "I built a web application using Next.js that leverages the OpenAI API to generate personalized cover letters for job seekers.  Users can easily tailor their cover letters through a user-friendly interface and download them in PDF format for seamless integration with their job applications.  For a global audience, the application is built with next-intl, enabling support for multiple languages.",
     link: "https://jobs-ai.gabrielcmoris.com/",
+  },
+  {
+    iconUrl: refhub,
+    theme: "btn-back-orange",
+    name: "Refhub",
+    description:
+      "I successfully designed, developed, and maintained a web application for managing referral codes. I prioritized user experience by creating an intuitive interface and ensuring data security.",
+    link: "https://refhub.netlify.app/",
   },
   {
     iconUrl: keyboard,

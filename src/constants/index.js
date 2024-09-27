@@ -250,7 +250,7 @@ export const projects = [
     name: "Refhub",
     description:
       "I successfully designed, developed, and maintained a web application for managing referral codes. I prioritized user experience by creating an intuitive interface and ensuring data security.",
-    link: "https://refhub.netlify.app/",
+    link: "https://refhub.gabrielcmoris.com/",
   },
   {
     iconUrl: keyboard,

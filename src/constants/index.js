@@ -221,6 +221,14 @@ export const socialLinks = [
 
 export const projects = [
   {
+    iconUrl: refhub,
+    theme: "btn-back-orange",
+    name: "Refhub",
+    description: "A comprehensive platform for managing referral codes. Designed for seamless user experience and secure data management.",
+    link: "https://refhub.gabrielcmoris.com/",
+    linkAndroid: "https://play.google.com/store/apps/details?id=com.gcm.refhub",
+  },
+  {
     iconUrl: menudiario,
     theme: "btn-back-red",
     name: "Menú Diario",
@@ -236,13 +244,6 @@ export const projects = [
     description:
       "A cutting-edge web app using Next.js and OpenAI to generate personalized cover letters. Users can customize letters and download PDFs, with support for multiple languages.",
     link: "https://jobs-ai.gabrielcmoris.com/",
-  },
-  {
-    iconUrl: refhub,
-    theme: "btn-back-orange",
-    name: "Refhub",
-    description: "A comprehensive platform for managing referral codes. Designed for seamless user experience and secure data management.",
-    link: "https://refhub.gabrielcmoris.com/",
   },
   {
     iconUrl: keyboard,
